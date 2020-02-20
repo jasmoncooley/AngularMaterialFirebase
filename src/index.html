@@ -17,6 +17,22 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- JS -->
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+      api_key: {YOUR_API_KEY_GOES_HERE}
+      authorize: true
+      lang:  es_ES
+    </script>
+
+    <script type="text/javascript">
+      function onLinkedInAuth() {
+        IN.API.Profile("me")
+        .result( function(me) {
+          var id = me.values[0].id;
+          // AJAX call to pass back id to your server
+        });
+      }
+    </script>
+
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
     <script src="//storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
 
@@ -25,6 +41,14 @@
 
   </head>
   <body>
-    <app-root>App is loading...</app-root>
+      <script type="IN/Login"> 
+        <form action="/register.html"> 
+        <p>Your Name: <input type="text" name="name" value="<?js= firstName ?> <?js= lastName ?>" /></p>
+        <p>Your Password: <input type="password" name="password" />  </p>
+        <input type="hidden" name="linkedin-id" value="<?js= id ?>" />
+        <input type="submit" name="submit" value="Sign Up"/>
+      </script>
+      <script type="IN/Login" data-onAuth="onLinkedInAuth"></script>
+    <!--<app-root>App is loading...</app-root> -->
   </body>
 </html>
