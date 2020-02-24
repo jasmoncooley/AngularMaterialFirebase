@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "freshguide-f37a2"
+  },
+  "targets": {
+    "freshguide-f37a2": {
+      "hosting": {
+        "app": [
+          "freshguidehu"
+        ]
+      }
+    }
+  }
+}
