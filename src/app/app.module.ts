@@ -16,6 +16,8 @@ import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './pages/profile/profile.module';
 import { MiscModule } from './components/misc/misc.module';
 import { PipesModule } from '@shared/pipes/pipes.module';
+import { LivechatWidgetModule } from '@livechat/angular-widget';
+
 
 // Shared
 import {
@@ -41,6 +43,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
+import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -50,11 +53,12 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
+    ChatbotComponent,
     PageNotFoundComponent,
     EmailMeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, LivechatWidgetModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
     MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
@@ -76,7 +80,8 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     AlertService,
     AuthGuardService,
     AuthService,
-    WindowService
+    WindowService,
+    ChatbotComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChatbotComponent } from 'src/app/components/blocks/chatbot/chatbot.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,9 @@ export class HomeComponent {
 
   public onToTop(): void {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+  constructor(public Chatbot: ChatbotComponent) {
+
   }
 
 }
