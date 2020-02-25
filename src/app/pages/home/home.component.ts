@@ -4,14 +4,7 @@ import { ChatbotComponent } from 'src/app/components/blocks/chatbot/chatbot.comp
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styles: [`
-  button {
-    position: fixed;
-    bottom: 70px;
-    float: right;
-    right: 10px;
-    z-index: 10;
-  }`]
+  styleUrls: ['home.component.css']
 })
 
 export class HomeComponent {
@@ -22,5 +15,8 @@ export class HomeComponent {
   constructor(public Chatbot: ChatbotComponent) {
 
   }
+
+
+
 
 }

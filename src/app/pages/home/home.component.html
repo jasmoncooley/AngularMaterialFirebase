@@ -1,16 +1,57 @@
-<app-first-block></app-first-block>
+<!-- <app-first-block></app-first-block> -->
 
-<br /><br /><br />
-  <app-background-slant></app-background-slant>
+<!-- <br /><br /><br /> -->
+  <!-- <app-background-slant></app-background-slant> -->
 
-<app-second-block></app-second-block>
+<!-- <app-second-block></app-second-block> -->
 
-<app-background-normal></app-background-normal>
+<!-- <app-background-normal></app-background-normal> -->
 <!-- 
 <app-third-block></app-third-block>
 
 <app-email-me></app-email-me>
 <app-background-email></app-background-email> -->
+
+<head>
+	<title>Fresh Alum</title>
+	<!-- <link rel="stylesheet" type="text/css" > -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+<body>
+	<div class="login-content">
+		<div class="user">
+			<form action="index.html">
+				<h2 class="title">Strengthening The Herd</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" class="input">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i"> 
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" class="input">
+					</div>
+				</div>
+				<a href="#">Forgot Password?</a>
+				<input type="submit" class="btn" value="Login">
+			</form>
+		</div>
+		<div class="bison">
+			<img class="logo" src="assets/img/Bison_logo.png">
+		</div>
+	</div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 <livechat-widget #liveChatWidget licenseId="11082047" (onChatLoaded)="Chatbot.onChatLoaded($event)" (onChatWindowOpened)="Chatbot.onChatWindowOpened()" (onChatWindowMinimized)="Chatbot.onChatWindowMinimized()" [visitor]="visitor" [params]="params"></livechat-widget>
 
 <button mat-raised-button class="mat-raised mat-primary" (click)="onToTop()">Top</button>
