@@ -8,7 +8,7 @@
 }
 
 .spacer-light {
-  margin: 0 10px;
+  margin: 0 75px;
 }
 
 .mat-toolbar.mat-primary {
@@ -42,10 +42,12 @@ a, a:hover {
   color:rgba(255,255,255,.87);
 }
 
-.login, .logout, .profile, .messages, .settings, .home, .about, .contact, .misc, .signup{
+.login, .logout, .profile, .messages, .settings, .about, .contact, .misc, .signup{
   color: #333;
 } 
-
+.home{
+  color: white;
+}
 // Sidenav
 .sidenav-content {
   display: flex;
