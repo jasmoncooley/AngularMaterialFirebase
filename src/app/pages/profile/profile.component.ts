@@ -29,7 +29,7 @@ import { UserService, AlertService } from '@shared';
 export class ProfileComponent implements OnInit {
   public uid = firebase.auth().currentUser.uid;
 
-  public fullImagePath: string = '/assets/img/mb-bg-04.png';
+  public fullImagePath: string = firebase.auth().currentUser.photoURL;
   public profileTitle: string = 'My profile';
   public displayName: string = firebase.auth().currentUser.displayName;
   public bio: any = 'Your bio';
@@ -54,7 +54,7 @@ export class ProfileComponent implements OnInit {
   public userEmail(): void {
     this.userService.getUserProfileInformation();
     firebase.auth().currentUser.email;
-    // console.log(firebase.auth().currentUser.email);
+    console.log(firebase.auth().currentUser);
   }
 
   public onPasswordReset(): void {
