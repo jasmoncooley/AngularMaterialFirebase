@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChatbotComponent } from 'src/app/components/blocks/chatbot/chatbot.component';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-home',
@@ -18,5 +19,5 @@ export class HomeComponent {
 
 
 
-
 }
+  // console.log(firebase.auth().currentUser);

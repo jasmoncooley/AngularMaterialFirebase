@@ -16,6 +16,7 @@ export class AuthService {
     this.token = 'some-temporary-token';
     this.router.navigate(['/']);
     console.log('AUTH: ', this.auth);
+
   }
 
   public logout(): void {
