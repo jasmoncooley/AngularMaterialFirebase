@@ -12,45 +12,97 @@
 <app-email-me></app-email-me>
 <app-background-email></app-background-email> -->
 
+
+<html>
 <head>
-	<title>Fresh Alum</title>
-	<!-- <link rel="stylesheet" type="text/css" > -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Categories</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/yml4ksi.css">
 </head>
 <body>
-	<div class="login-content">
-		<div class="user">
-			<form action="index.html">
-				<h2 class="title">Strengthening The Herd</h2>
-				<div class="input-div one">
-					<div class="i">
-						<i class="fas fa-user"></i>
-					</div>
-					<div class="div">
-						<h5>Username</h5>
-						<input type="text" class="input">
-					</div>
-				</div>
-				<div class="input-div pass">
-					<div class="i"> 
-						<i class="fas fa-lock"></i>
-					</div>
-					<div class="div">
-						<h5>Password</h5>
-						<input type="password" class="input">
-					</div>
-				</div>
-				<a href="#">Forgot Password?</a>
-				<input type="submit" class="btn" value="Login">
-			</form>
-		</div>
-		<div class="bison">
-			<img class="logo" src="assets/img/Bison_logo.png">
-		</div>
-	</div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <div class="header">
+        <h2>All Categories</h2>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Registration.png">
+                </p>
+                <p class="title">
+                    Registration
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Jobs.png">
+                </p>
+                <p class="title">
+                    Jobs
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Mentorship.png">
+                </p>
+                <p class="title">
+                    Mentorship
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Organizations.png">
+                </p>
+                <p class="title">
+                    Orginizations
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Classes.png">
+                </p>
+                <p class="title">
+                    Classes
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Study_Tips.png">
+                </p>
+                <p class="title">
+                    Study Tips
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Graduation.png">
+                </p>
+                <p class="title">
+                    Graduation
+                </p>
+            </div>
+        </div>
+        <div class="grid-item" style="background-color: #E51937; ">
+            <p class="sptitle">
+                Connections
+            </p>
+        </div>
+    </div>
 </body>
+
 
 <livechat-widget #liveChatWidget licenseId="11082047" (onChatLoaded)="Chatbot.onChatLoaded($event)" (onChatWindowOpened)="Chatbot.onChatWindowOpened()" (onChatWindowMinimized)="Chatbot.onChatWindowMinimized()" [visitor]="visitor" [params]="params"></livechat-widget>
 
