@@ -11,8 +11,9 @@ import { AuthService, AlertService, UserService } from '@shared';
   styleUrls: ['./profile-settings.component.scss']
 })
 export class ProfileSettingsComponent implements OnInit {
+  
   public uid = firebase.auth().currentUser.uid;
-  public displayName: string = 'Your username';
+  public displayName: string = firebase.auth().currentUser.displayName;
   public bio: any = 'Your bio';
 
   constructor(
@@ -25,6 +26,7 @@ export class ProfileSettingsComponent implements OnInit {
     return firebase.database().ref().child(`users/${this.uid}`).once('value').then((snap) => {
       this.displayName = snap.val().displayName;
       this.bio = snap.val().bio;
+      // console.log(firebase.auth().currentUser);
     });
   }
 
