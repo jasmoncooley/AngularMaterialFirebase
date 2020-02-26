@@ -34,7 +34,7 @@ export class ChatbotComponent implements OnInit {
   onChatLoaded(api: LiveChatWidgetApiModel): void {
     this.liveChatApi = api;
     this.isLiveChatWidgetLoaded = true;
-    this.openChatWindow();
+
 
 
     // Sometimes it can happen that LC_Invite is is still being loaded when onChatLoaded is called. To ensure that LC_Invite is loaded you can give additional check to onChatLoaded function:
@@ -50,6 +50,8 @@ export class ChatbotComponent implements OnInit {
 
   onChatWindowOpened() {
     console.log('opened')
+    console.log(this.liveChatWidget);
+
   }
 
   openChatWindow(): void {
