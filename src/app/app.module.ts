@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
          MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
          MatCardModule, MatTabsModule, MatIconModule } from '@angular/material';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
@@ -44,6 +46,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 // Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
 import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component';
+import { FrontComponent } from './front/front.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,8 @@ import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component'
     FooterComponent,
     ChatbotComponent,
     PageNotFoundComponent,
-    EmailMeComponent
+    EmailMeComponent,
+    FrontComponent
   ],
   imports: [
     BrowserModule, LivechatWidgetModule,
@@ -70,6 +74,8 @@ import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component'
     PipesModule,
     BlocksModule,
     AuthModule,
+    AngularFireModule.initializeApp(firebaseKeys),
+    AngularFireDatabaseModule,
     BackgroundsModule,
     ProfileModule,
     MiscModule,

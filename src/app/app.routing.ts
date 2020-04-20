@@ -7,6 +7,8 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
+import { FrontComponent } from './front/front.component';
+
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './pages/auth/auth.component';
@@ -23,8 +25,9 @@ import { AuthGuardService } from '@shared';
 const appRoutes: Routes = [
 
   // Public pages
-  { path: '', redirectTo: '/home', pathMatch : 'full' },
+  { path: '', redirectTo: '/front', pathMatch : 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'front', component: FrontComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
