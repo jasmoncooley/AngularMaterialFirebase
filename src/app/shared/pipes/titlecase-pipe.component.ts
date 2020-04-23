@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   `
 })
 export class TitleCasePipeComponent {
-  public message = 'Freshman Guide HU';
+  public message = 'Fresh Alum';
 
 }

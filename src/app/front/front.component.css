@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+	margin: 0;
+    background: #DEDEDE;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: 'alvaro';
+    font-size: 60px;
+}
+  
+.lp-top {
+    align-content: center;
+    background-color: #003A63;
+    margin-top: -80px;
+	padding: 30px;
+	text-align: center;
+	font-size: 90px; 
+	font-weight: bold;
+    transition: 0.2s;
+}
+
+.head {
+	max-width: 30%;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    justify-content: center;
+    padding: 0px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 30);
+}
+
+.p-row {
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.p-row h2 {
+    color: #E51937;
+    margin-bottom: 20px;
+}
+
+.prod-descript {
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 300;
+}
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+  
+.specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.feature-desc {
+    text-align: center;
+    padding: 0px 50px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    margin: 20px 0px;
+}
+
+.w-row {
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.w-row h2 {
+    color: #E51937;
+    margin-bottom: 20px;
+}
+
+.founders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.inner-container {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    display: flex;
+    flex: 0 0 150px;
+    height: 150px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+}
+
+.creator {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100%;
+}
+
+.caption {
+    color: #E51937;
+    text-align: center;
+    margin: 5px;
+}
+  
+.overlay {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    background-color: rgba(227,24,55,0.4);
+    background: linear-gradient(65deg, rgba(227,24,55,0.4), rgba(0,58,99,0.4));
+    color: #fafafa;
+    font-size: 24px;
+}
+  
+.overlay:hover {
+    opacity: 1;
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about{
+    text-align: center;
+    margin-top: 20px;
+}
