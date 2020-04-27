@@ -10,9 +10,8 @@
                 <i class="far fa-comment"></i>
             </div>
             <div class="info">
-                <div class="title"><a routerLink="view/forum/1">Announcements</a></div>
-                <div class="description">Do I have to introduce myself? - No, you don't. but it would be nice to say
-                    hello and get yourself known into the community.</div>
+                <div class="title"><a routerLink="view/forum/1">Registration</a></div>
+                <div class="description">We know the first step can sometimes be the hardest, let those who came before you help you navigate Howard's registration process </div>
             </div>
             <div class="topics">
                 <div *ngIf="!isTopicsLoaded" class="loader-wrapper">
@@ -27,11 +26,9 @@
                 <i class="far fa-comment"></i>
             </div>
             <div class="info">
-                <div class="title"><a routerLink="view/forum/2">VIP Application</a></div>
+                <div class="title"><a routerLink="view/forum/2">Jobs</a></div>
                 <div class="description">
-                    Apply now and
-                    <br>
-                    Watch Video ➤ https://goo.gl/pKjJQ3
+                    Apply now! or, if you're already in one, share some insider tips!
                 </div>
             </div>
             <div *ngIf="allTopics" class="topics">
@@ -47,9 +44,9 @@
                 <i class="far fa-comment"></i>
             </div>
             <div class="info">
-                <div class="title"><a routerLink="view/forum/3">Admin Application</a></div>
+                <div class="title"><a routerLink="view/forum/3">Mentorship</a></div>
                 <div class="description">
-                    Now open. Expect a closing in the pursuable future.
+                    Everyone needs some guidance from time to time, find yours here:
                 </div>
             </div>
             <div *ngIf="allTopics" class="topics">
@@ -65,9 +62,9 @@
                 <i class="far fa-comment"></i>
             </div>
             <div class="info">
-                <div class="title"><a routerLink="view/forum/4">Suggestions</a></div>
+                <div class="title"><a routerLink="view/forum/4">Organizations</a></div>
                 <div class="description">
-                    You think our server could be improved? Share your suggestions here.
+                    What organizations would be best for you? 
                 </div>
             </div>
             <div *ngIf="allTopics" class="topics">
@@ -83,9 +80,9 @@
                 <i class="far fa-comment"></i>
             </div>
             <div class="info">
-                <div class="title"><a routerLink="view/forum/5">Cafeteria</a></div>
+                <div class="title"><a routerLink="view/forum/5">Class</a></div>
                 <div class="description">
-                    Just waking up while drinking your coffee? Well enjoy reading about the hilarious internet!
+                    Stay on track for that degree!
                 </div>
             </div>
             <div *ngIf="allTopics" class="topics">
@@ -93,6 +90,24 @@
                     <div class="loader small"></div>
                 </div>
                 {{allTopics['5']}}
+            </div>
+        </li>
+
+        <li class="forum">
+            <div class="icon">
+                <i class="far fa-comment"></i>
+            </div>
+            <div class="info">
+                <div class="title"><a routerLink="view/forum/6">Study Tips</a></div>
+                <div class="description">
+                    Find the best ways to get those A's!
+                </div>
+            </div>
+            <div *ngIf="allTopics" class="topics">
+                <div *ngIf="!isTopicsLoaded" class="loader-wrapper">
+                    <div class="loader small"></div>
+                </div>
+                {{allTopics['6']}}
             </div>
         </li>
 
