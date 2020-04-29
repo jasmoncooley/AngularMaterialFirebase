@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 // Pages
 import { HomeComponent } from './pages/home/home.component';
 import { FrontComponent } from './front/front.component';
-import { ForumsComponent } from 'src/app/pages/home/forums/forums.component';
+import { ForumsComponentComponent } from 'src/app/forums-component/forums-component.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './pages/auth/auth.component';
@@ -28,7 +28,7 @@ const appRoutes: Routes = [
 
   // Public pages
   { path: '', redirectTo: '/front', pathMatch : 'full' },
-  { path: '', component: ForumsComponent },
+  { path: '', component: ForumsComponentComponent },
   //{ path: 'mytopics', component: MyTopicsComponent},
   //{ path: 'myreplies', component: MyRepliesComponent},
   { path: 'home', component: HomeComponent },

@@ -16,6 +16,7 @@ export class AuthService {
     this.token = 'some-temporary-token';
     this.router.navigate(['/']);
     console.log('AUTH: ', this.auth);
+    console.log(firebase.auth().currentUser);
   }
 
   public logout(): void {
@@ -25,6 +26,7 @@ export class AuthService {
   }
 
   public getIdToken(): string {
+
     firebase.auth().currentUser.getIdToken()
       .then(
         (token: string) => this.token = token

@@ -47,6 +47,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
 import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component';
 import { FrontComponent } from './front/front.component';
+import { ForumsComponentComponent } from './forums-component/forums-component.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { FrontComponent } from './front/front.component';
     ChatbotComponent,
     PageNotFoundComponent,
     EmailMeComponent,
-    FrontComponent
+    FrontComponent,
+    ForumsComponentComponent
   ],
   imports: [
     BrowserModule, LivechatWidgetModule,

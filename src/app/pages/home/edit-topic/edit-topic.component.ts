@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddTopicModel } from 'src/app/core/models/topic-models/add-topic.model';
 import { TopicService } from 'src/app/core/services/topic.service';
-import { AuthService } from 'src/app/core/services/auth.service';
+//import { AuthService } from 'src/app/core/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -26,7 +26,7 @@ export class EditTopicComponent implements OnInit {
 
     constructor(
         private topicService: TopicService,
-        public authService: AuthService,
+        //public authService: AuthService,
         private route: ActivatedRoute,
         private toastr: ToastrService,
         private router: Router) {

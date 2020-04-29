@@ -1,0 +1,120 @@
+[debug] [2020-02-23T22:55:21.249Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T22:55:21.250Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:firebaseguidehu
+[debug] [2020-02-23T22:55:21.250Z] CLI Version:   7.13.1
+[debug] [2020-02-23T22:55:21.250Z] Platform:      darwin
+[debug] [2020-02-23T22:55:21.250Z] Node Version:  v10.14.2
+[debug] [2020-02-23T22:55:21.251Z] Time:          Sun Feb 23 2020 17:55:21 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-23T22:55:21.251Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T22:55:21.251Z] 
+[debug] [2020-02-23T22:55:21.258Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-23T22:55:21.259Z] > authorizing via signed-in user
+[debug] [2020-02-23T22:55:21.259Z] [iam] checking project freshguide-f37a2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-23T22:55:21.260Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/freshguide-f37a2:testIamPermissions  
+
+[debug] [2020-02-23T22:55:21.442Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-23T22:55:21.444Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/freshguide-f37a2  
+ 
+[debug] [2020-02-23T22:55:21.678Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'freshguide-f37a2'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/freshguide-f37a2/overview
+[debug] [2020-02-23T22:55:21.997Z] TypeError: Cannot read property 'deploys' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-02-23T22:58:51.539Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T22:58:51.540Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:firebaseguidehu
+[debug] [2020-02-23T22:58:51.540Z] CLI Version:   7.13.1
+[debug] [2020-02-23T22:58:51.540Z] Platform:      darwin
+[debug] [2020-02-23T22:58:51.541Z] Node Version:  v10.14.2
+[debug] [2020-02-23T22:58:51.541Z] Time:          Sun Feb 23 2020 17:58:51 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-23T22:58:51.541Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T22:58:51.541Z] 
+[debug] [2020-02-23T22:58:51.551Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-23T22:58:51.551Z] > authorizing via signed-in user
+[debug] [2020-02-23T22:58:51.551Z] [iam] checking project freshguide-f37a2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-23T22:58:51.552Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/freshguide-f37a2:testIamPermissions  
+
+[debug] [2020-02-23T22:58:52.014Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-23T22:58:52.016Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/freshguide-f37a2  
+ 
+[debug] [2020-02-23T22:58:52.390Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'freshguide-f37a2'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/freshguide-f37a2/overview
+[debug] [2020-02-23T22:58:52.507Z] TypeError: Cannot read property 'deploys' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-02-23T23:01:13.845Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T23:01:13.847Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:firebaseguidehu
+[debug] [2020-02-23T23:01:13.847Z] CLI Version:   7.13.1
+[debug] [2020-02-23T23:01:13.847Z] Platform:      darwin
+[debug] [2020-02-23T23:01:13.847Z] Node Version:  v10.14.2
+[debug] [2020-02-23T23:01:13.848Z] Time:          Sun Feb 23 2020 18:01:13 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-23T23:01:13.848Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T23:01:13.848Z] 
+[debug] [2020-02-23T23:01:13.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-23T23:01:13.855Z] > authorizing via signed-in user
+[debug] [2020-02-23T23:01:13.855Z] [iam] checking project freshguide-f37a2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-23T23:01:13.856Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/freshguide-f37a2:testIamPermissions  
+
+[debug] [2020-02-23T23:01:14.338Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-23T23:01:14.340Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/freshguide-f37a2  
+ 
+[debug] [2020-02-23T23:01:14.600Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'freshguide-f37a2'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/freshguide-f37a2/overview
+[debug] [2020-02-23T23:01:14.788Z] TypeError: Cannot read property 'deploys' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-02-23T23:02:58.387Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T23:02:58.388Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:firebaseguidehu
+[debug] [2020-02-23T23:02:58.388Z] CLI Version:   7.13.1
+[debug] [2020-02-23T23:02:58.388Z] Platform:      darwin
+[debug] [2020-02-23T23:02:58.388Z] Node Version:  v10.14.2
+[debug] [2020-02-23T23:02:58.389Z] Time:          Sun Feb 23 2020 18:02:58 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-23T23:02:58.389Z] ----------------------------------------------------------------------
+[debug] [2020-02-23T23:02:58.389Z] 
+[debug] [2020-02-23T23:02:58.396Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-23T23:02:58.397Z] > authorizing via signed-in user
+[debug] [2020-02-23T23:02:58.397Z] [iam] checking project freshguide-f37a2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-23T23:02:58.398Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/freshguide-f37a2:testIamPermissions  
+
+[debug] [2020-02-23T23:02:58.753Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-23T23:02:58.755Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/freshguide-f37a2  
+ 
+[debug] [2020-02-23T23:02:59.195Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'freshguide-f37a2'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/freshguide-f37a2/overview
+[debug] [2020-02-23T23:02:59.289Z] TypeError: Cannot read property 'deploys' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.

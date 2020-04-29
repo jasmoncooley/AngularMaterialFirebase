@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber';
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber';
+
+@import '~@angular/material/theming';
+@import 'assets/scss/modules/_fonts.scss';
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */ 
+$my-custom-primary: mat-palette($mat-grey,300);
+$my-custom-accent: mat-palette($mat-indigo, 900);
+$my-custom-warn: mat-palette($mat-lime);
+
+$my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);
 
 body {
-    background-color: #f7f7f7;
+    background-color: #DEDEDE;
 }
 
 /* Tablet format and lower */

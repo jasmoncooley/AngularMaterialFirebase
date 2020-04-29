@@ -5,7 +5,15 @@
         <form class="form" (ngSubmit)="onUpdateUserInfo(sv)" #sv="ngForm">
 
             <mat-form-field class="form-group">
-                <input matInput placeholder="Username" id="displayName" name="displayName" [(ngModel)]="displayName" required>
+                <input matInput placeholder="First Name" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+            </mat-form-field>
+
+            <mat-form-field class="form-group">
+                <input matInput placeholder="Last Name" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+            </mat-form-field>
+
+            <mat-form-field class="form-group">
+                <input matInput placeholder="Classification" id="gradYear" name="gradYear" [(ngModel)]="gradYear" required>
             </mat-form-field>
 
             <mat-form-field class="form-group">

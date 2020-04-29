@@ -2,7 +2,7 @@ import { browser, element, by } from 'protractor';
 
 export class Angular4ProjectPage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/front');
   }
 
   getHeadingText() {
