@@ -110,6 +110,40 @@
                 {{allTopics['6']}}
             </div>
         </li>
+        <li class="forum">
+            <div class="icon">
+                <i class="far fa-comment"></i>
+            </div>
+            <div class="info">
+                <div class="title"><a routerLink="view/forum/6">Graduation</a></div>
+                <div class="description">
+                    You've taken the first step, get help getting to the final one
+                </div>
+            </div>
+            <div *ngIf="allTopics" class="topics">
+                <div *ngIf="!isTopicsLoaded" class="loader-wrapper">
+                    <div class="loader small"></div>
+                </div>
+                {{allTopics['7']}}
+            </div>
+        </li>
+        <li class="forum">
+            <div class="icon">
+                <i class="far fa-comment"></i>
+            </div>
+            <div class="info">
+                <div class="title"><a routerLink="view/forum/6">Connections</a></div>
+                <div class="description">
+                    Find the best ways to get those A's!
+                </div>
+            </div>
+            <div *ngIf="allTopics" class="topics">
+                <div *ngIf="!isTopicsLoaded" class="loader-wrapper">
+                    <div class="loader small"></div>
+                </div>
+                {{allTopics['8']}}
+            </div>
+        </li>
 
     </ul>
 

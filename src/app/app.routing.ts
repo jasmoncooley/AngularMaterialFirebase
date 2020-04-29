@@ -7,11 +7,15 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Pages
 import { HomeComponent } from './pages/home/home.component';
+import { FrontComponent } from './front/front.component';
+import { ForumsComponent } from 'src/app/pages/home/forums/forums.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile/profile-settings.component';
+//import { MyTopicsComponent } from './components/authentication/my-topics/my-topics.component';
+//import { MyRepliesComponent } from './components/authentication/my-replies/my-replies.component';
 
 // Components
 import { MiscComponent } from './components/misc/misc.component';
@@ -23,8 +27,12 @@ import { AuthGuardService } from '@shared';
 const appRoutes: Routes = [
 
   // Public pages
-  { path: '', redirectTo: '/home', pathMatch : 'full' },
+  { path: '', redirectTo: '/front', pathMatch : 'full' },
+  { path: '', component: ForumsComponent },
+  //{ path: 'mytopics', component: MyTopicsComponent},
+  //{ path: 'myreplies', component: MyRepliesComponent},
   { path: 'home', component: HomeComponent },
+  { path: 'front', component: FrontComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'misc', component: MiscComponent },

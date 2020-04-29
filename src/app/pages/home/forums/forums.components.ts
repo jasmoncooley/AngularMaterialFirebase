@@ -19,6 +19,8 @@ export class ForumsComponent implements OnInit {
             this.allTopics['4'] = data.filter(x => x.forumId == 4).length
             this.allTopics['5'] = data.filter(x => x.forumId == 5).length
             this.allTopics['6'] = data.filter(x => x.forumId == 6).length
+            this.allTopics['7'] = data.filter(x => x.forumId == 7).length
+            this.allTopics['8'] = data.filter(x => x.forumId == 8).length
             this.isTopicsLoaded = true
         })
     }

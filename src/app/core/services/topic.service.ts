@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { AuthService } from '@shared';
 import { AddTopicModel } from '../models/topic-models/add-topic.model';
 
-const TOPICS_URL = 'https://baas.kinvey.com/appdata/kid_HkUANrtxV/topics'
+const TOPICS_URL = 'https://baas.kinvey.com/appdata/kid_HkUANrtxV/topics' //just the URL from the tutorial. #TODO: Change when we have our own
 
 @Injectable({
     providedIn: 'root'

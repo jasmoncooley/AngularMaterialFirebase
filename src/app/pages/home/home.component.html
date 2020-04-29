@@ -1,17 +1,116 @@
-<app-first-block></app-first-block>
+<!-- <app-first-block></app-first-block> -->
 
-<br /><br /><br />
+<!-- <br /><br /><br /> -->
+  <!-- <app-background-slant></app-background-slant> -->
 
-<app-card-block></app-card-block>
-<app-background-slant></app-background-slant>
+<!-- <app-second-block></app-second-block> -->
 
-<app-second-block></app-second-block>
-
-<app-background-normal></app-background-normal>
-
+<!-- <app-background-normal></app-background-normal> -->
+<!-- 
 <app-third-block></app-third-block>
 
 <app-email-me></app-email-me>
-<app-background-email></app-background-email>
+<app-background-email></app-background-email> -->
 
-<button mat-raised-button class="mat-raised mat-primary" (click)="onToTop()">Top</button>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Categories</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/yml4ksi.css">
+</head>
+<body>
+    <div class="header">
+        <h2>All Categories</h2>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Registration.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Registration
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Jobs.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Jobs
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Mentorship.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Mentorship
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Organizations.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Orginizations
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Classes.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Classes
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Study_Tips.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Study Tips
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="nested">
+                <p class="icon">
+                    <img src="assets/img/Graduation.png">
+                    <a href="src/app/pages/home/forums.component.html"></a>
+                </p>
+                <p class="title">
+                    Graduation
+                </p>
+            </div>
+        </div>
+        <div class="grid-item" style="background-color: #E51937; ">
+            <p class="sptitle">
+                Connections
+            </p>
+        </div>
+    </div>
+</body>
+
+
+<livechat-widget #liveChatWidget licenseId="11082047" (onChatLoaded)="Chatbot.onChatLoaded($event)" (onChatWindowOpened)="Chatbot.onChatWindowOpened()" (onChatWindowMinimized)="Chatbot.onChatWindowMinimized()" [visitor]="visitor" [params]="params"></livechat-widget>
+
+<!-- <button mat-raised-button class="mat-raised mat-primary" (click)="onToTop()">Top</button> -->

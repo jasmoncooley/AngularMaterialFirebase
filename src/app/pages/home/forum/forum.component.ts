@@ -17,7 +17,9 @@ export class ForumComponent implements OnInit {
         '3' : 'Mentorship',
         '4' : 'Organizations',
         '5' : 'Class',
-        '6' : 'Study Tips'
+        '6' : 'Study Tips',
+        '7' : 'Graduation',
+        '8' : 'Connections'
     }
 
     constructor(private topicService: TopicService,
