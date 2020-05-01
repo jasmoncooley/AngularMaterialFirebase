@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AddTopicModel } from 'src/app/core/models/topic-models/add-topic.model';
-import { TopicService } from 'src/app/core/services/topic.service';
-//import { AuthService } from 'src/app/core/services/auth.service';
+import { AddTopicModel } from '@shared/models/topic-models/add-topic.model';
+import { TopicService } from '@shared/services/topic.service';
+import { AuthService } from '@shared';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: 'app-edit-topic',
@@ -15,20 +15,23 @@ export class EditTopicComponent implements OnInit {
     forumId: number
     topicId: string
     forumName: Object = {
-        '1': 'Announcements',
-        '2': 'VIP Application',
-        '3': 'Admin Application',
-        '4': 'Suggestions',
-        '5': 'Cafeteria',
+        '1': 'Registration',
+        '2': 'Jobs',
+        '3': 'Mentorship',
+        '4': 'Organizations',
+        '5': 'Class',
+        '6': 'Study Tips',
+        '7': 'Graduation',
+        '8': 'Connections'
     }
     alteredDescription: string
     urlRegex: any = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)
 
     constructor(
         private topicService: TopicService,
-        //public authService: AuthService,
+        public authService: AuthService,
         private route: ActivatedRoute,
-        private toastr: ToastrService,
+        //private toastr: ToastrService,
         private router: Router) {
         this.forumId = this.route.snapshot.params['forumId']
         this.topicId = this.route.snapshot.params['topicId']
@@ -42,7 +45,7 @@ export class EditTopicComponent implements OnInit {
 
     editTopic() {
         this.topicService.editTopic(this.topicId, this.editTopicModel).subscribe(() => {
-            this.toastr.success('Topic edited successfully', 'Success')
+            //this.toastr.success('Topic edited successfully', 'Success')
             this.router.navigate([`view/forum/${this.forumId}/viewtopic/${this.topicId}`])
 
         })

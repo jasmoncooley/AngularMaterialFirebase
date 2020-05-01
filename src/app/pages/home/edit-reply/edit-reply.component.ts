@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ReplyModel } from 'src/app/core/models/topic-models/reply.model';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { ReplyModel } from '@shared/models/topic-models/reply.model';
+import { AuthService } from '@shared';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ReplyService } from 'src/app/core/services/reply.service';
-import { ToastrService } from 'ngx-toastr';
+import { ReplyService } from '@shared/services/reply.service';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: 'app-edit-reply',
@@ -21,7 +21,7 @@ export class EditReplyComponent implements OnInit {
         public authService: AuthService,
         private route: ActivatedRoute,
         private replyService: ReplyService,
-        private toastr: ToastrService,
+        //private toastr: ToastrService,
         private router: Router) {
         this.replyId = route.snapshot.params['replyId']
         this.forumId = route.snapshot.params['forumId']
@@ -37,7 +37,7 @@ export class EditReplyComponent implements OnInit {
 
     editReply() {
         this.replyService.editReply(this.replyId, this.replyModel).subscribe( () => {
-            this.toastr.success('Reply Edited Successfully', 'Success')
+            //this.toastr.success('Reply Edited Successfully', 'Success')
             this.router.navigate([`/view/forum/${this.forumId}/viewtopic/${this.topicId}`])
         })
     }

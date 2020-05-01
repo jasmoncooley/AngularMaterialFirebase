@@ -33,6 +33,10 @@ export class AuthService {
       );
     return this.token;
   }
+  
+  user() {
+    return JSON.parse(sessionStorage.getItem('user') || localStorage.getItem('user'))
+  }
 
   public isAuthenticated(): string {
     return sessionStorage.getItem('session-alive');

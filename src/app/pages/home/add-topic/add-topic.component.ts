@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AddTopicModel } from 'src/app/core/models/topic-models/add-topic.model';
-import { TopicService } from 'src/app/core/services/topic.service';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AddTopicModel } from '@shared/models/topic-models/add-topic.model';
+import { TopicService } from '@shared/services/topic.service';
+import { AuthService } from '@shared';
 import { ActivatedRoute } from '@angular/router';
-import { UsersService } from 'src/app/core/services/users.service';
-import { UserModel } from 'src/app/core/models/auth-models/user.model';
+import { UserService } from '@shared/services/user.service';
+import { User } from '@shared/models/user.model';
 
 @Component({
     selector: 'app-add-topic',
@@ -15,13 +15,16 @@ export class AddTopicComponent implements OnInit {
     addTopicModel: AddTopicModel
     forumId: string
     forumName: Object = {
-        '1': 'Announcements',
-        '2': 'VIP Application',
-        '3': 'Admin Application',
-        '4': 'Suggestions',
-        '5': 'Cafeteria',
+        '1': 'Registration',
+        '2': 'Jobs',
+        '3': 'Mentorship',
+        '4': 'Organizations',
+        '5': 'Class',
+        '6': 'Study Tips',
+        '7': 'Graduation',
+        '8': 'Connections'
     }
-    user: UserModel
+    user: User
     alteredDescription: string
     urlRegex: any = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)
 
@@ -29,7 +32,7 @@ export class AddTopicComponent implements OnInit {
         private topicService: TopicService,
         public authService: AuthService,
         private route: ActivatedRoute,
-        private userService: UsersService) {
+        private userService: UserService) {
         let author = authService.user().username
         let forumId = this.route.snapshot.params['id']
         this.addTopicModel = new AddTopicModel('', '', author, forumId, 0)
@@ -46,7 +49,7 @@ export class AddTopicComponent implements OnInit {
             this.userService.getUserByName(this.addTopicModel.author).subscribe(data => {
                 this.user = data[0]
                 this.user.postsCount += 1
-                this.userService.editUserById(this.user, this.user._id).subscribe()
+                this.userService.editUserById(this.user, this.user.uid).subscribe()
             })
         })
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TopicService } from 'src/app/core/services/topic.service';
-import { AddTopicModel } from 'src/app/core/models/topic-models/add-topic.model';
+import { TopicService } from '@shared/services/topic.service';
+import { AddTopicModel } from '@shared/models/topic-models/add-topic.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

@@ -1,19 +1,40 @@
 import * as firebase from 'firebase';
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http'
 import { User } from '../models';
 import { AlertService } from './alert.service';
+
+const USER_URL = 'https://freshguide-f37a2.firebaseio.com/'
 
 @Injectable()
 export class UserService {
 
-  constructor(private alertService: AlertService) {}
+  constructor(private alertService: AlertService, private http: HttpClient) {}
 
   public saveUserInfo(uid: string, name: string, email: string): Promise<string> {
     return firebase.database().ref().child('users/' + uid).set({
       name: name,
       email: email
     });
+  }
+  getUserByName(name: string) {
+    return this.http.get<User>(USER_URL + '/' + `?query={"username":"${name}"}`)
+}
+
+  editUserById(body: Object, uid: string) {
+    return this.http.put(USER_URL + '/' + uid, body)
+  }
+
+  /*deleteUser(uid: string) {
+    return this.delete(USER_URL + '/' + uid + '?hard=true')
+  }*/
+
+  getAllUsers() {
+    return this.http.get<User[]>(USER_URL)
+  }
+
+  getUserById(uid: string) {
+    return this.http.get<User>(USER_URL + '/' + uid)
   }
 
   public updateUserInfo(uid: string, displayName: string, bio: string): Promise<string> {

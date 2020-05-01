@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TopicService } from 'src/app/core/services/topic.service';
+import { TopicService } from '@shared/services/topic.service';
 @Component({
   selector: 'app-forums-component',
   templateUrl: './forums-component.component.html',

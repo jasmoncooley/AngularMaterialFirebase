@@ -1,15 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ReplyModel } from 'src/app/core/models/topic-models/reply.model';
-import { AuthService } from 'src/app/core/services/auth.service';
-import { ReplyService } from 'src/app/core/services/reply.service';
+import { ReplyModel } from '@shared/models/topic-models/reply.model';
+import { AuthService } from '@shared';
+import { ReplyService } from '@shared/services/reply.service';
 import { Observable } from 'rxjs';
-import { ToastrService } from 'ngx-toastr';
+//import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { TopicService } from 'src/app/core/services/topic.service';
-import { AddTopicModel } from 'src/app/core/models/topic-models/add-topic.model';
-import { RegisterModel } from 'src/app/core/models/auth-models/register.model';
-import { UsersService } from 'src/app/core/services/users.service';
-import { UserModel } from 'src/app/core/models/auth-models/user.model';
+import { TopicService } from '@shared/services/topic.service';
+import { AddTopicModel } from '@shared/models/topic-models/add-topic.model';
+import { RegisterModel } from '@shared/models/auth-models/register.model';
+import { UserService } from '@shared/services/user.service';
+import { User } from '@shared/models/user.model';
 
 @Component({
     selector: 'app-add-reply',
@@ -23,7 +23,7 @@ export class AddReplyComponent implements OnInit {
     adminRole: string = 'edcd0c4e-6625-4896-bacb-e8ea4c2f8e91'
     topicModel: AddTopicModel
     users: any
-    user: UserModel
+    user: User
     urlRegex: any = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)
 
     @Input('topicId') topicId: string;
@@ -33,12 +33,12 @@ export class AddReplyComponent implements OnInit {
     constructor(
         private replyService: ReplyService,
         public authService: AuthService,
-        private toastr: ToastrService,
+        //private toastr: ToastrService,
         private router: Router,
         private topicService: TopicService,
-        private userService: UsersService) {
+        private userService: UserService) {
         let author = ''
-        if (authService.isLoggedIn()) {
+        if (authService.isAuthenticated()) {
             author = authService.user().username
         }
         this.replyModel = new ReplyModel('', '', author, '', this.forumId)
@@ -185,23 +185,23 @@ export class AddReplyComponent implements OnInit {
                 })
 
                 //refreshing the users meta info
-                this.users[this.authService.user().username].postsCount += 1
+                //this.users[this.authService.user().username].postsCount += 1
 
                 //this is to increase postCount in the current user
                 let userId = this.authService.user().id
                 this.userService.getUserById(userId).subscribe(data => {
                     this.user = data
                     this.user.postsCount += 1
-                    this.userService.editUserById(this.user, this.user._id).subscribe()
+                    this.userService.editUserById(this.user, this.user.uid).subscribe()
                 })
             })
         })
     }
 
-    deleteReply(id: string, author: string) {
+    /*deleteReply(id: string, author: string) {
         if (confirm('DELETE selected reply.\nAre you sure about that?')) {
             this.replyService.deleteReply(id).subscribe(() => {
-                this.toastr.success('Reply Deleted Successfully', 'Success')
+                //this.toastr.success('Reply Deleted Successfully', 'Success')
                 this.replyService.getCommentsByTopicId(this.replyModel.topicId).subscribe(data => {
                     this.replies = data
 
@@ -213,7 +213,7 @@ export class AddReplyComponent implements OnInit {
                     })
 
                     //this is to deincrease postCount in the current user
-                    this.userService.getUserByName(author).subscribe(data => {
+                    this.userService.getUserByName({ uid: name }).subscribe(data => {
                         this.user = data[0]
                         this.user.postsCount -= 1
                         this.userService.editUserById(this.user, this.user._id).subscribe()
@@ -223,7 +223,7 @@ export class AddReplyComponent implements OnInit {
                 })
             })
         }
-    }
+    }*/
 
     addEmoji(event) {
         let emoji = event.target.innerText
