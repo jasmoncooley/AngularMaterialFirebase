@@ -1,0 +1,71 @@
+/* Structure */
+.example-container {
+    position: relative;
+    min-height: 200px;
+    margin: 50px;
+  }
+  
+  .example-table-container {
+    position: relative;
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .example-loading-shade {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-rate-limit-reached {
+    color: #980000;
+    max-width: 360px;
+    text-align: center;
+  }
+  
+  /* Column Widths */
+  .mat-column-number,
+  .mat-column-state {
+    max-width: 64px;
+  }
+  
+  .mat-column-created {
+    max-width: 124px;
+  }
+
+
+
+  .pagination {
+    display: inline-block;
+    margin: 15px;
+  }
+  
+  .pagination button {
+    color: rgb(255, 255, 255);
+    background-color: #3f51b5 ;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+  }
+
+  .pagination button:disabled {
+
+    background-color: gray ;
+
+  }
+  .pagination mat-form-field {
+    margin-left: 10px;
+  }

@@ -5,5 +5,6 @@
 // import 'zone.js/dist/zone-error';
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl:'http://5da8543fe44c790014cd4b86.mockapi.io'
 };

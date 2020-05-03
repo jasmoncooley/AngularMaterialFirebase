@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+//import { ForumComponent } from 'src/app/pages/home/forum/forum.component';
 
 // Modules
 import { BlocksModule } from './components/blocks/blocks.module';
@@ -30,6 +31,7 @@ import {
   AuthGuardService,
   AuthService,
   WindowService
+  
 } from '@shared';
 
 // Main
@@ -43,11 +45,13 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
+
 // Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
 import { ChatbotComponent } from './components/blocks/chatbot/chatbot.component';
 import { FrontComponent } from './front/front.component';
-import { ForumsComponentComponent } from './forums-component/forums-component.component';
+//import { ForumsComponentComponent } from './forums-component/forums-component.component';
+//import { SinglePostService } from '@shared/services/single-post.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,7 @@ import { ForumsComponentComponent } from './forums-component/forums-component.co
     PageNotFoundComponent,
     EmailMeComponent,
     FrontComponent,
-    ForumsComponentComponent
+    //ForumComponent
   ],
   imports: [
     BrowserModule, LivechatWidgetModule,
@@ -89,6 +93,8 @@ import { ForumsComponentComponent } from './forums-component/forums-component.co
     AuthGuardService,
     AuthService,
     WindowService,
+    //SinglePostService,
+    //ForumComponent,
     ChatbotComponent
   ],
   schemas: [

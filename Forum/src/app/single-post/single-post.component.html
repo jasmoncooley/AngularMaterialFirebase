@@ -1,0 +1,30 @@
+<h3>Post</h3>
+
+<mat-card class="example-card" *ngIf="post">
+        <mat-card-header>
+            <mat-card-title class="postTitle">{{post.title}}</mat-card-title>
+            <mat-card-subtitle>{{post.createdAt | date: 'medium'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+                <p>
+                  {{post.body}}
+                </p>
+              </mat-card-content>
+    </mat-card>
+
+<h3>Comments ({{comments.length}})</h3>
+
+<mat-card *ngFor="let comment of comments">
+    <mat-card-header>
+        <img src="{{comment.avatar}}" mat-card-avatar  class="example-header-image">
+        <mat-card-title>{{comment.name}}</mat-card-title>
+        <mat-card-subtitle>{{comment.createdAt | date: 'medium'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+            <p>
+              {{comment.body}}
+            </p>
+          </mat-card-content>
+</mat-card>
+
+<button mat-raised-button (click)="goBack()" class="goBack">Back</button>
